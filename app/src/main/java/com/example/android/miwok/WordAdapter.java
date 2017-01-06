@@ -3,8 +3,8 @@ package com.example.android.miwok;
 /**
 created by vineet raj
 */
+
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +44,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //the getView method will handle the resource id and will handle inflating of layout
         super(context, 0, words);
         mColorResourceId = colorResourceId;
+
     }
 
     /**
