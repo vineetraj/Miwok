@@ -1,8 +1,8 @@
 package com.example.android.miwok;
 
 /**
-created by vineet raj
-*/
+ * Created by vineet on 29-Dec-16.
+ */
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
@@ -15,9 +15,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by vineet on 29-Dec-16.
- */
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
