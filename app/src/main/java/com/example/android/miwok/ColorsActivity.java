@@ -18,10 +18,11 @@ public class ColorsActivity extends AppCompatActivity {
      * This listener gets triggered when the {@link MediaPlayer} has completed
      * playing the audio file.
      */
-    //NOTE:Nested interface has been used here. Inside MediaPlayer class, we have an interface OnCompletionListener.
+    //NOTE:MediaPlayer.OnCompletionListener: Nested interface has been used here. Inside MediaPlayer class, we have an interface OnCompletionListener.
     //The nested interface must be referred by the outer interface or class. It can't be accessed directly.
-    //MediaPlayer.OnCompletionListener
+    //
     MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        //we are creating an instance of an anonymous subclass of our MediaPlayer class
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             releaseMediaPlayer();
@@ -78,6 +79,14 @@ public class ColorsActivity extends AppCompatActivity {
                 //and we are passing it to setOnCompletionListener interface.
             }
         });
+    }
+
+    // When the activity is stopped, release the media player resources because we won't
+    // be playing any more sounds.
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
     }
 
     /**

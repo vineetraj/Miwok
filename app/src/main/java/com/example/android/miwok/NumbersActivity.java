@@ -83,7 +83,14 @@ public class NumbersActivity extends AppCompatActivity {
                 //and we are passing it to setOnCompletionListener interface.
             }
         });
+    }
 
+    // When the activity is stopped, release the media player resources because we won't
+    // be playing any more sounds.
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
     }
 
     /**
