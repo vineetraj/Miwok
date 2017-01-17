@@ -3,6 +3,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/tan_background"
                 android:orientation="horizontal">
 
     <ImageView
@@ -51,5 +52,15 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="16dp"
         android:src="@drawable/ic_play_arrow_white_36dp"/>
-
+    <!-- Instead of using drawSelectorOnTop in word_list.xml, we can add a new View that overlaps all other views in
+    the RelativeLayout and matches the RelativeLayout’s width and height.
+    The View has a background of "?android:attr/selectableItemBackground”, so the View will be transparent by default,
+    so we can see the contents of the list item.
+    Then it will show a pressed state when the list item is clicked on.
+    i.e.
+    <View
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="?android:attr/selectableItemBackground"/>
+    -->
 </RelativeLayout>
