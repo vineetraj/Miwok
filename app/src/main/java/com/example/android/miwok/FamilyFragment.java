@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.android.miwok2.R;
+
 import java.util.ArrayList;
 
 /**
