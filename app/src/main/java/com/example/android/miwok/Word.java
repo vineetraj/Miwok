@@ -23,6 +23,7 @@ public class Word {
      * resource ID for audio of each word
      */
     private int mAudioResourceId;
+
     /**
      * Create a new Word object.
      *
@@ -52,22 +53,30 @@ public class Word {
         flag = true;
     }
 
-    /** Get the Miwok translation of the word */
+    /**
+     * Get the Miwok translation of the word
+     */
     public String getMiwokTranslation() {
         return mMiwokTranslation;
     }
 
-    /** Get the default translation of the word */
+    /**
+     * Get the default translation of the word
+     */
     public String getDefaultTranslation() {
         return mDefaultTranslation;
     }
 
-    /** Get the image resource ID of the word */
+    /**
+     * Get the image resource ID of the word
+     */
     public int getImageResourceId() {
         return mImageResourceId;
     }
 
-    /** return true if image present else false*/
+    /**
+     * return true if image present else false
+     */
     public boolean hasImage() {
         return flag;
     }
